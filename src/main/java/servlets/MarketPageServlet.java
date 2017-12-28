@@ -1,32 +1,24 @@
 package servlets;
 
-import templater.PageGenerator;
+import market.MarketPageBuilder;
 
-import javax.servlet.*;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.net.URL;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
 
-public class Frontend extends HttpServlet {
-
-    private final String login = "";
-
+public class MarketPageServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String key = req.getParameter("key");
+        resp.setContentType("text/html;charset=utf-8");
 
-        resp.getWriter().println(key);
-
-        resp.setStatus(HttpServletResponse.SC_OK);
+        MarketPageBuilder marketPageBuilder = new MarketPageBuilder("/");
+        marketPageBuilder.generate();
+        resp.getWriter().println(marketPageBuilder.getPage());
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
     }
 }

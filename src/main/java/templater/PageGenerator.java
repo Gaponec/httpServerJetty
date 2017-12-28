@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.io.Writer;
+import java.util.Collection;
 import java.util.Map;
 
 public class PageGenerator {
@@ -23,6 +24,7 @@ public class PageGenerator {
         if(pageGenerator==null){
             pageGenerator = new PageGenerator();
         }
+
         return pageGenerator;
     }
 

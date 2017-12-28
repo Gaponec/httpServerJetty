@@ -1,0 +1,30 @@
+.top-bar{
+    background-color: #000;
+    padding: 10px 0;
+}
+
+.container{
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+ul{
+    float: left;
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+}
+
+a{
+    display: block;
+    -webkit-transition: color 200ms cubic-bezier(0.55, 0, 0.1, 1) 0s;
+    transition: color 200ms cubic-bezier(0.55, 0, 0.1, 1) 0s;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 300;
+    text-decoration: none;
+}
